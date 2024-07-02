@@ -22,8 +22,8 @@ const maxNumber2 = (arr) => {
     if(arr.length === 0) {
         console.log("Array is empty");
     }
-    return Math.max
+    return Math.max.apply(null,arr);
 }
 
-console.log(maxNumber(input));
+console.log(maxNumber2(input));
 
