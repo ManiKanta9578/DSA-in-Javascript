@@ -1,3 +1,5 @@
+//10. Javascript program to Find the max count of consecutive 1’s in an array ?
+
 const nums = [1, 1, 0, 1, 1, 1];
 
 const maxConsecutiveOnes = (nums) => {
