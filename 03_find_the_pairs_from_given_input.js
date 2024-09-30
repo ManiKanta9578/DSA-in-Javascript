@@ -1,22 +1,21 @@
-const encodeString = (input) => {
-    if (input.length === 0) return;
+// Find pairs from given input ? 
+// input1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]; input2 = 10; 
+// output = [[4, 6], [3, 7], [2, 8], [1, 9]]
+const findPairs = (arr, target) => {
+    let pairs = [];
+    let seen = new Set();
 
-    let result = "";
-    let count = 1;
-
-    for (let i = 1; i < input.length; i++) {
-        if (input[i] === input[i - 1]) {
-            count++;
-        } else {
-            result += count + input[i - 1];
-            count = 1;
+    for (let num of arr) {
+        let compliment = target - num;
+        if (seen.has(compliment)) {
+            pairs.push([compliment, num]);
         }
+
+        seen.add(num);
     }
-    result += count + input[input.length - 1];
-    return result;
+    return pairs;
 }
 
-
-const input = "abbcccddddeeff";
-const output = encodeString(input);
-console.log(output);
+let input1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let input2 = 10;
+console.log(findPairs(input1, input2))
