@@ -24,6 +24,8 @@ const isPrime_Optimised = (n) => {
     return true;
 };
 
+//Big-O = O(sqrt(n));
+
 console.log(isPrime(1));
 console.log(isPrime(55));
 console.log(isPrime(7));
